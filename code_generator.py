@@ -12,7 +12,7 @@ for i in range(noc):
 
     for j in range(code_len-len(prefix)):
         code = code+random.choice(chars)
-        code = code.replace("0","IN",)
-        code = code.replace("O","11",)
+        code = code.replace("0","X",)
+        code = code.replace("O","1",) #thay thế số 0 và chữ O đỡ nhầm lẫn
 
     print(code)
