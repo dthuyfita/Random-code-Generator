@@ -23,7 +23,7 @@ def generate_codes():
         code = prefix
         for _ in range(code_len - len(prefix)):
             c = random.choice(chars)
-            c = c.replace("0", "X").replace("O", "X")
+            c = c.replace("0", "X").replace("O", "X") #thay thế số 0 và chữ O thành ký tự khác cho dễ đọc
             code += c
         codes.append(code)
 
