@@ -23,14 +23,14 @@ def generate_codes():
         code = prefix
         for _ in range(code_len - len(prefix)):
             c = random.choice(chars)
-            c = c.replace("0", "X").replace("O", "X") #thay thế số 0 và chữ O thành ký tự khác cho dễ đọc
+            c = c.replace("0", "X").replace("O", "X")
             code += c
         codes.append(code)
 
-    result_box.delete(1.0, tk.END)
-    result_box.insert(tk.END, "\n".join(codes))
+    result_box.delete(1.0, tk.END) #xoá hết ndung box trc khi hiển thị kq
+    result_box.insert(tk.END, "\n".join(codes)) #chèn kq vào, xuống dòng giữa các code
 
-def copy_all():
+def copy_all(): #copy kq, k cần bôi đen
     all_text = result_box.get("1.0", tk.END).strip()  # Loại bỏ dòng trống cuối
     window.clipboard_clear()
     window.clipboard_append(all_text)
